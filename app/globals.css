@@ -2,32 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* Base styles */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f4d0; /* Khaki */
+  color: #2F4F4F; /* Dark Slate Gray */
+  margin: 0;
+  padding: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Utility classes */
+.text-center {
+  text-align: center;
 }
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+  background-color: #FFD700; /* Gold */
+  color: #FFFFFF; /* White */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; /* Bold */
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header input[type="text"] {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+}
+
+/* Footer */
+footer {
+  background-color: #2F4F4F; /* Dark Slate Gray */
+  color: #FFFFFF; /* White */
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Coin Card */
+.coin-card {
+  background-color: #FFFFFF; /* White */
+  border: 1px solid #F0E68C; /* Khaki */
+  padding: 1rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.coin-card img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.coin-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Semi-Bold */
+  color: #2F4F4F; /* Dark Slate Gray */
+}
+
+.coin-card p {
+  font-family: 'Roboto', sans-serif;
+  color: #2F4F4F; /* Dark Slate Gray */
+}
+
+/* Interactive Map */
+.map-section {
+  background-color: #fbf7cd; /* Khaki */
+  padding: 2rem;
+  border-radius: 0.375rem;
+  margin: 2rem 0;
+}
+
+.map-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; /* Bold */
+  color: #2F4F4F; /* Dark Slate Gray */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.map-section .map-container {
+  border: 2px solid #2E8B57; /* Sea Green */
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
