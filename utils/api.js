@@ -1,10 +1,8 @@
-
-
 import axios from "axios";
-const EXCHANGERATE_API_KEY = process.env.NEXT_PUBLIC_EXCHANGERATE_API_KEY;
 
 const headers = {
   "Numista-API-Key": process.env.NEXT_PUBLIC_NUMISTA_API_KEY,
+  // 'EXCHANGERATE_API_KEY': process.env.NEXT_PUBLIC_EXCHANGERATE_API_KEY,
 };
 
 export const fetchCoinData = async (query) => {
@@ -13,7 +11,7 @@ export const fetchCoinData = async (query) => {
     const response = await axios.get(
       `https://api.numista.com/api/v3/types?q=${query}`,
       {
-        headers
+        headers,
       }
     );
     console.log("Coin Data Response: ", response.data);
@@ -27,14 +25,17 @@ export const fetchCoinData = async (query) => {
   }
 };
 
-export const fetchExchangeRates = async (baseCurrency = "USD") => {
-  try {
-    const response = await axios.get(
-      `https://v6.exchangerate-api.com/v6/${EXCHANGERATE_API_KEY}/latest/${baseCurrency}`
-    );
-    return response.data.conversion_rates;
-  } catch (error) {
-    console.error("Error fetching exchange rates:", error);
-    return null;
-  }
-};
+// export const fetchExchangeRates = async (baseCurrency = "USD") => {
+//   try {
+//     const response = await axios.get(
+//       `https://v6.exchangerate-api.com/v6/${EXCHANGERATE_API_KEY}/latest/${baseCurrency}`,
+//       {
+//         headers,
+//       }
+//     );
+//     return response.data.conversion_rates;
+//   } catch (error) {
+//     console.error("Error fetching exchange rates:", error);
+//     return null;
+//   }
+// };
