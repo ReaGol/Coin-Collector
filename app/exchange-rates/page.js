@@ -102,8 +102,8 @@ const ExchangeRates = () => {
           </select>
         </div>
         {conversionRate !== null && (
-          <div className='p-4 bg-white rounded-lg w-full sm:w-48 shadow-md mb-8'>
-            <p className='text-xl'>
+          <div className='p-4 bg-white rounded-lg w-full shadow-md mb-8'>
+            <p className='text-xl w-full sm:w-48 '>
               1 {fromCurrency} = {conversionRate} {toCurrency}
             </p>
           </div>
