@@ -11,8 +11,8 @@ const Navbar = () => {
           <Link legacyBehavior href='/search'>
             <a className='text-white'>Search</a>
           </Link>
-          <Link legacyBehavior href='/collection'>
-            <a className='text-white'>Collection</a>
+          <Link legacyBehavior href='/exchange-rates'>
+            <a className='text-white'>Exchange Rate</a>
           </Link>
         </div>
       </div>
