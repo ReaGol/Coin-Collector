@@ -6,14 +6,12 @@ const headers = {
 
 export const fetchCoinData = async (query) => {
   try {
-    console.log("Fetching coin data for query: ", query);
     const response = await axios.get(
       `https://api.numista.com/api/v3/types?q=${query}`,
       {
         headers,
       }
     );
-    console.log("Coin Data Response: ", response.data);
     return response.data;
   } catch (error) {
     console.error(

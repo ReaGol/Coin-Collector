@@ -11,9 +11,7 @@ export async function GET(request) {
 
        
     const data = await fetchCoinData(query);
-    console.log("Server - Data fetched: ", data);
     if (data && data.types) {
-      console.log("Server - Coin data: ", data.types);
       return new Response(JSON.stringify(data.types), { status: 200 });
     } else {
       return new Response(JSON.stringify([]), { status: 200 });

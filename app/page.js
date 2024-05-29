@@ -13,9 +13,7 @@ export default function Home() {
   useEffect(() => {
     const fetchInitialData = async () => {
       try {
-        console.log("Client - Fetching initial data");
         const result = await axios.get(`/api/numista?q=liberty`);
-        console.log("Client - Initial Data Result: ", result.data);
         if (result.data) {
           setCoins(result.data);
         } else {
@@ -31,11 +29,9 @@ export default function Home() {
 
   const handleSearch = async () => {
     try {
-      console.log("Client - Sending query: ", query);
       const result = await axios.get(
         `/api/numista?query=${encodeURIComponent(query)}`
       );
-      console.log("Client - Search Result: ", result.data);
       if (result.data) {
         setCoins(result.data);
       } else {

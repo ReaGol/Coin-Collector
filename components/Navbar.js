@@ -8,9 +8,9 @@ const Navbar = () => {
           <a className='text-white text-2xl font-bold'>Coin Collector's Hub</a>
         </Link>
         <div className='flex space-x-4'>
-          <Link legacyBehavior href='/search'>
+          {/* <Link legacyBehavior href='/search'>
             <a className='text-white'>Search</a>
-          </Link>
+          </Link> */}
           <Link legacyBehavior href='/exchange-rates'>
             <a className='text-white'>Exchange Rate</a>
           </Link>
